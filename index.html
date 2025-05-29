@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2進数マスターへの招待状</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>2進数マスターへの招待状</h1>
+    <div class="input-group">
+      <label for="binaryInput">2進数を入力：</label>
+      <input id="binaryInput" type="text" placeholder="例: 1011">
+      <button id="convertButton">変換</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="modalClose">×</span>
+      <h2>各桁の重みについて</h2>
+      <p>
+        2進数では、各桁の位置に応じて2の累乗（<em>重み</em>）が決まります。<br>
+        右端は2<sup>0</sup>=1、次は2<sup>1</sup>=2、2<sup>2</sup>=4、2<sup>3</sup>=8…と倍々になります。
+      </p>
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" id="modal2Close">×</span>
+      <h2>指数と基数の関係</h2>
+      <p>
+        「a<sup>n</sup>」は「基数aをn回かけた値」を意味します。
+        </p>
+        <p>
+        例として、2の累乗を考えます。<br>
+        2<sup>1</sup> = 2<br>
+        2<sup>2</sup> = 2 × 2 = 4<br>
+        2<sup>3</sup> = 2 × 2 × 2 = 8<br><br>
+        指数が1上がるごとに「2倍」、逆に1下がると「2分の1倍」となり、<br>
+        2<sup>0</sup>は 2<sup>1</sup> の「2分の1倍」で「1」となります。<br><br>
+        この考え方はすべての数に当てはまり、<br>
+        どんな基数aでも a<sup>0</sup> = 1 です。
+      </p>
+    </div>
+  </div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
